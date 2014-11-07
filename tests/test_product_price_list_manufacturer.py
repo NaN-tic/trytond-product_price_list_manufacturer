@@ -8,24 +8,18 @@ import unittest
 
 
 class ProductPriceListManufacturerTestCase(unittest.TestCase):
-    '''
-    Test Product Price List Manufacturer module.
-    '''
+    'Test Product Price List Manufacturer module'
 
     def setUp(self):
         trytond.tests.test_tryton.install_module(
             'product_price_list_manufacturer')
 
     def test0005views(self):
-        '''
-        Test views.
-        '''
+        'Test views'
         test_view('product_price_list_manufacturer')
 
     def test0006depends(self):
-        '''
-        Test depends.
-        '''
+        'Test depends'
         test_depends()
 
 
