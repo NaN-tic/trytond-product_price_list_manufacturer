@@ -8,11 +8,10 @@ __all__ = [
     'PriceList',
     'PriceListLine'
     ]
-__metaclass__ = PoolMeta
 
 
 class PriceList:
-    'Price List'
+    __metaclass__ = PoolMeta
     __name__ = 'product.price_list'
 
     def compute(self, party, product, unit_price, quantity, uom,
@@ -27,6 +26,7 @@ class PriceList:
 
 
 class PriceListLine:
+    __metaclass__ = PoolMeta
     __name__ = 'product.price_list.line'
 
     manufacturer = fields.Many2One('party.party', 'Manufacturer',
